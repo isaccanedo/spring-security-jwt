@@ -18,4 +18,29 @@ Aqui estão alguns cenários em que JSON Web Tokens são úteis:
 
 - Troca de informações: JSON Web Tokens são uma boa maneira de transmitir informações entre as partes com segurança. Como os JWTs podem ser assinados - por exemplo, usando pares de chaves pública / privada - você pode ter certeza de que os remetentes são quem dizem ser. Além disso, como a assinatura é calculada usando o cabeçalho e a carga útil, você também pode verificar se o conteúdo não foi adulterado.
 
+# 3. Qual é a estrutura do JSON Web Token?
+Em sua forma compacta, JSON Web Tokens consistem em três partes separadas por pontos (.), Que são:
+
+- Cabeçalho;
+- Carga útil;
+- Assinatura.
+- 
+Portanto, um JWT normalmente se parece com o seguinte.
+
+```
+xxxxx.yyyyy.zzzzz
+```
+Vamos analisar as diferentes partes.
+
+### Cabeçalho
+O cabeçalho normalmente consiste em duas partes: o tipo de token, que é JWT, e o algoritmo de assinatura que está sendo usado, como HMAC SHA256 ou RSA.
+
+Por exemplo:
+```
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+```
+Então, esse JSON é codificado em Base64Url para formar a primeira parte do JWT.
 
