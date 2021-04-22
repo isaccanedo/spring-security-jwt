@@ -24,7 +24,7 @@ Em sua forma compacta, JSON Web Tokens consistem em três partes separadas por p
 - Cabeçalho;
 - Carga útil;
 - Assinatura.
-- 
+
 Portanto, um JWT normalmente se parece com o seguinte.
 
 ```
